@@ -75,7 +75,7 @@ func New(opts ...Option) (*k3s, error) {
 				"KUBECONFIG=/k3s-config/k3s.yaml",
 			},
 			Contents: []*docker.Content{
-				docker.NewContentFromString("alias k=kubectl", "/etc/profile"),
+				docker.NewContentFromString("alias k=kubectl", "/root/.profile"),
 			},
 			Networks: make([]docker.NetworkAttachment, 0),
 			ExtraHosts: []string{

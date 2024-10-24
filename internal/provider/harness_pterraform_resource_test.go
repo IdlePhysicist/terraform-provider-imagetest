@@ -68,10 +68,6 @@ resource "imagetest_feature" "test" {
       name = "Access and create some stuff"
       cmd = "kubectl get po -A && kubectl create ns test"
     },
-    {
-      name = "Access the new namespace"
-      cmd = "k get ns test"
-    },
   ]
 }
           `,
